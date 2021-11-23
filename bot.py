@@ -69,7 +69,7 @@ def find_message(message):
     try:
         file_name= message.text + "_" + str(message.chat.id) + ".txt"
         bot.send_message(message.chat.id, open(file_name, 'r').read())
-    except exception:
+    except Exception:
         bot.send_message(message.chat.id, "Не удалось найти текст по заголовку: " + message.text +"\nВозможно такого заголовка не существует в системе")
 
 # RUN
